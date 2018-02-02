@@ -1,0 +1,44 @@
+== README
+
+Instalação do aplicativo
+READ-ME – passo a passo para instalação do site
+
+// 1) Vamos utilizar o paperclip para fazer upload dos arquivos. Para tanto é preciso instalar o imagemagick na plataforma. No Ubuntu/Linux, para tanto, digite os seguintes comandos: //
+
+sudo apt-get update
+sudo apt-get install imagemagick
+
+//Obs. no Windows é preciso baixar a instalação executável disponível no site de download, rodar o executável e reinicializar a máquina após a instalação//
+
+// 2) Depois de instalar o programa, é preciso informar o path do programa para o paperclip. Portanto, digite //
+which convert 
+// Este comando irá retornar um cmainho, por exemplo  /usr/local/bin/convert
+Coloque este path no arquivo 
+config/environments/development.rb //
+Paperclip.options[:command_path] = "/usr/local/bin/"
+//Obs. No Windows é preciso instalar o programa file que está disponível em https://sorceforge.net/projects/gnuwin32
+Também é preciso inserir mais um path abaixo do outro, com uma linha semelhante à abaixo, com a localização do programa file.exe//
+Paperclip.options[:command_path] = "C:/Program Files (x86)/GnuWin32/bin"
+//3) Depois de clonar o projeto para dentro de um diretório, entre no diretório e digite o comando para instalar as gems do projeto //
+bundle install
+
+// 4) caso seu rails não rode por causa do time_zone, entre no arquivo Gemfile e acrescente no arquivo a linha //
+gem ‘tzinfo-data’
+
+//caso esteja no Linux, também poderá digitar no prompt de comando as duas linhas//
+gem install tzinfo-data
+bundle
+
+
+//5) para instalar o Banco de Dados, digite o comando //
+bundle exec rake db:migrate
+
+//6 agora digite a linha de execução do rails dentro do diretório//
+rails s 
+
+//dirija-se ao browser e coloque como url//
+localhost:3000
+
+
+
+
