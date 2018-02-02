@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :stores
+  resources :documentos
+
+  root "documentos#index" #direciona para a página funcional do exercício, onde podem ser anexados arquivos
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

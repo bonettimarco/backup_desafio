@@ -1,0 +1,25 @@
+<%= form_for(@documento, local: true, multipart: true, id: :formulario) do |form| %>
+  <% if @documento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@documento.errors.count, "error") %> prohibited this documento from being saved:</h2>
+
+      <ul>
+      <% @documento.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="form-actions">
+    <div class="field">
+      <%= form.label :documento %>
+      <%= form.file_field :file %>
+    </div>
+    
+    </div>
+
+  <div class="actions" id="carregar">
+    <%= form.submit %>
+  </div>
+<% end %>

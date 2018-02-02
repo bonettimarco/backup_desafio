@@ -1,0 +1,19 @@
+<div class="jumbotron">
+    <p id="notice"><%= notice %></p>
+    <h1>Anexar novo Documento</h1>
+    <h3>Obs. arquivos maiores que 10Mb serão recusados</h3>
+
+<%= render 'form', documento: @documento %>
+    <div class="row col-md-12">
+                <div id="loading">     
+                  <img src="http://i.stack.imgur.com/Z4BUx.gif" alt="Carregando..." title="Carregando...">
+                </div>
+    </div>      
+<%= link_to 'Back', documentos_path %>
+
+</div>
+<script>
+$( "#carregar" ).click(function() {
+  $( "#loading" ).show();
+  $( "#formulario" ).submit();
+});</script>
