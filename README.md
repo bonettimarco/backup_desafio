@@ -1,24 +1,49 @@
+Desafio de programação 1
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+A idéia deste desafio é nos permitir avaliar melhor as habilidades de candidatos à vagas de programador, de vários níveis.
 
+Este desafio deve ser feito por você em sua casa. Gaste o tempo que você quiser, porém normalmente você não deve precisar de mais do que algumas horas.
+Instruções de entrega do desafio
 
-Welcome to your Rails project on Cloud9 IDE!
+    Primeiro, faça um fork deste projeto para sua conta no Github (crie uma se você não possuir).
+    Em seguida, implemente o projeto tal qual descrito abaixo, em seu próprio fork.
+    Por fim, empurre todas as suas alterações para o seu fork no Github e envie um pull request para este repositório original. Se você já entrou em contato com alguém da Myfreecomm sobre uma vaga, avise também essa pessoa por email, incluindo no email o seu usuário no Github.
 
-To get started, just do the following:
+Instruções alternativas de entrega do desafio (caso você não queira que sua submissão seja pública)
 
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://HOSTNAME/).
+    Faça um clone deste repositório.
+    Em seguida, implemente o projeto tal qual descrito abaixo, em seu clone local.
+    Por fim, envie via email um arquivo patch para seu contato na Myfreecomm.
 
-Happy coding!
-The Cloud9 IDE team
+Descrição do projeto
 
+Você recebeu um arquivo de texto com os dados de vendas da empresa. Precisamos criar uma maneira para que estes dados sejam importados para um banco de dados.
 
-## Support & Documentation
+Sua tarefa é criar uma interface web que aceite upload de arquivos, normalize os dados e armazene-os em um banco de dados relacional.
 
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+Sua aplicação web DEVE:
+
+    Aceitar (via um formulário) o upload de arquivos separados por TAB com as seguintes colunas: purchaser name, item description, item price, purchase count, merchant address, merchant name. Você pode assumir que as colunas estarão sempre nesta ordem, que sempre haverá dados em cada coluna, e que sempre haverá uma linha de cabeçalho. Um arquivo de exemplo chamado example_input.tab está incluído neste repositório.
+    Interpretar ("parsear") o arquivo recebido, normalizar os dados, e salvar corretamente a informação em um banco de dados relacional.
+    Exibir a receita bruta total representada pelo arquivo enviado após o upload + parser.
+    Ser escrita obrigatoriamente em Ruby 2.0+ ou Python 2.7+ (caso esteja entrevistando para uma vaga específica, utilize a linguagem solicitada pela vaga).
+    Ser simples de configurar e rodar, funcionando em ambiente compatível com Unix (Linux ou Mac OS X). Ela deve utilizar apenas linguagens e bibliotecas livres ou gratuitas.
+
+Sua aplicação web não precisa:
+
+    Lidar com autenticação ou autorização (pontos extras se ela fizer, mais pontos extras se a autenticação for feita via OAuth).
+    Ser escrita usando algum framework específico (mas não há nada errado em usá-los também, use o que achar melhor).
+    Ter uma aparência bonita.
+
+Avaliação
+
+Seu projeto será avaliado de acordo com os seguintes critérios.
+
+    Sua aplicação preenche os requerimentos básicos?
+    Você documentou a maneira de configurar o ambiente e rodar sua aplicação?
+    Você seguiu as instruções de envio do desafio?
+
+Adicionalmente, tentaremos verificar a sua familiarização com as bibliotecas padrões (standard libs), bem como sua experiência com programação orientada a objetos a partir da estrutura de seu projeto.
+Referência
+
+Este desafio foi baseado neste outro desafio: https://github.com/lschallenges/data-engineering
