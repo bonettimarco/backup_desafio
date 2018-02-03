@@ -3,7 +3,10 @@
 
         <%= render 'total', documento: @documento %>
 <%= render 'form' %>
-
-<%= link_to 'Show', @documento %> |
-<%= link_to 'Back', documentos_path %>
+    <div class="btn btn-success btn-block">
+        <%= link_to 'Show', @documento %> |
+    </div>
+    <div class="btn btn-info btn-block">
+        <%= link_to 'Back', documentos_path %>
+    </div>
 </div>

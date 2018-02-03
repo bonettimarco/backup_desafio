@@ -14,21 +14,22 @@
     <% @documentos.each do |documento| %>
       <tr>
         <th>Documento número</td>
-        <th>Mostrar o documento</td>
-        <th>Substituir este arquivo</td>
+        <th>Mostrar/Substituir o documento</td>
         <th>Apagar o arquivo</td>
       </tr>
       <tr>
         <td><%= documento.id %> - <%= render 'total', documento: documento%></td>
-        <td><%= link_to 'Show', documento %></td>
-        <td><%= link_to 'Edit', edit_documento_path(documento) %></td>
+        <td><%= link_to 'Show', documento %>//<%= link_to 'Edit', edit_documento_path(documento) %></td>
         <td><%= link_to 'Destroy', documento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'Inserir novo relatório', new_documento_path %>
+    <div class="btn btn-success btn-block">
+    <%= link_to 'Ver dados do BD', stores_path %>
+    </div>
+    <div class="btn btn-info btn-block">
+    <%= link_to 'Inserir novo relatório', new_documento_path %>
+    </div>
 </div>

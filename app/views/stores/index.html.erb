@@ -1,4 +1,5 @@
-<p id="notice"><%= notice %></p>
+<div class="jumbotron">
+  <p id="notice"><%= notice %></p>
 
 <h1>Listing Stores</h1>
 
@@ -6,10 +7,8 @@
   <thead>
     <tr>
       <th>Purchaser name</th>
-      <th>Item </th>
-      <th>Description</th>
-      <th>Item </th>
-      <th>Price</th>
+      <th>Item Description</th>
+      <th>Item Price</th>
       <th>Purchase count</th>
       <th>Merchant address</th>
       <th>Merchant name</th>
@@ -21,10 +20,8 @@
     <% @stores.each do |store| %>
       <tr>
         <td><%= store.purchaser_name %></td>
-        <td><%= store.item_ %></td>
-        <td><%= store.description %></td>
-        <td><%= store.item_ %></td>
-        <td><%= store.price %></td>
+        <td><%= store.item_description %></td>
+        <td><%= store.item_price %></td>
         <td><%= store.purchase_count %></td>
         <td><%= store.merchant_address %></td>
         <td><%= store.merchant_name %></td>
@@ -37,5 +34,10 @@
 </table>
 
 <br>
-
-<%= link_to 'New Store', new_store_path %>
+    <div class="btn btn-success btn-block">
+    <%= link_to 'Voltar para home', root_path %>
+    </div>
+    <div class="btn btn-info btn-block">
+      <%= link_to 'New Store', new_store_path %>
+    </div>
+</div>

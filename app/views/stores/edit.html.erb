@@ -1,6 +1,11 @@
-<h1>Editing Store</h1>
+<div class="jumbotron">
+    <h1>Editar dados do BD</h1>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @store %> |
-<%= link_to 'Back', stores_path %>
+    <div class="btn btn-success btn-block">
+        <%= link_to 'Show', @store %>
+    </div>
+    <div class="btn btn-info btn-block">
+        <%= link_to 'Back', stores_path %>
+    </div>
+</div>

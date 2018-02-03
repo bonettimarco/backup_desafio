@@ -1,5 +1,6 @@
-<p id="notice"><%= notice %></p>
-
+<div class="jumbotron">
+  <p id="notice"><%= notice %></p>
+    <h1>Mostrando dados do BD</h1>
 <p>
   <strong>Purchaser name:</strong>
   <%= @store.purchaser_name %>
@@ -7,22 +8,12 @@
 
 <p>
   <strong>Item :</strong>
-  <%= @store.item_ %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @store.description %>
+  <%= @store.item_description %>
 </p>
 
 <p>
   <strong>Item :</strong>
-  <%= @store.item_ %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @store.price %>
+  <%= @store.item_price %>
 </p>
 
 <p>
@@ -39,6 +30,10 @@
   <strong>Merchant name:</strong>
   <%= @store.merchant_name %>
 </p>
-
-<%= link_to 'Edit', edit_store_path(@store) %> |
-<%= link_to 'Back', stores_path %>
+    <div class="btn btn-success btn-block">
+      <%= link_to 'Edit', edit_store_path(@store) %> |
+    </div>
+    <div class="btn btn-info btn-block">
+      <%= link_to 'Back', stores_path %>
+    </div>
+</div>
